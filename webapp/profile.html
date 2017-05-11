@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="google-signin-client_id" content="398498638367-ceigrntkd5524a2acaefdlg7n17bkiff.apps.googleusercontent.com">
+    <title>Profile</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous" defer></script>
+
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+    <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js" defer></script>
+    <script src="/static/js/profile.js" defer></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBC81T2t8tdGc5q5qD4_JYnz4OEsDdTDVI&libraries=places&callback=initAutocomplete" defer></script>
+</head>
+<body>
+    <b><button id="signout">Sign Out</button></b><br /><br />
+
+    <b>Profile Information:</b> <br /><br />
+    <form id="profile">
+        w<input type="text" name="Id" hidden/><br />
+        Full Name: <input type="text" name="FullName"/> <br />
+        Address:  <input id="autocomplete" placeholder="Enter your address"
+                         onFocus="geolocate()" type="text" name="Address"/> <br />
+        Email:     <input type="text" name="Email"/> <br />
+        Telephone: <input type="text" name="Telephone"/> <br />
+    </form>
+    <br />
+    <br />
+    <button id="editProfile">Edit Profile</button><br />
+    <button id="saveProfile">Save Profile</button><br />
+    <div id="alertify-element"></div>
+</body>
+</html>

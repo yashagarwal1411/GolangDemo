@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta name="google-signin-client_id" content="398498638367-ceigrntkd5524a2acaefdlg7n17bkiff.apps.googleusercontent.com">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous" defer></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous" defer></script>
+
+    <script src="https://cdn.rawgit.com/alertifyjs/alertify.js/v1.0.10/dist/js/alertify.js" defer></script>
+    <script src="https://apis.google.com/js/platform.js" defer></script>
+
+    <script src="/static/js/auth.js" defer></script>
+</head>
+<body>
+    SIGN IN:<br /><br />
+    <form id="signIn">
+        Email: <input type="text" name="Email" /><br />
+        Password: <input type="password" name="Password" /><br /><br />
+        <input id="signInSubmit" type="submit" value="SIGN IN"><br />
+    </form>
+    <br />
+    <a href="/forgotPassword">Forgot Password</a>
+    <br />
+    <hr />
+    SIGN UP:
+    <br /><br />
+    <form id="signUp">
+        Email: <input type="text" name="Email"/><br />
+        Password: <input type="password" name="Password" /><br /><br />
+        <input id="signUpSubmit" type="submit" value="SIGN UP"><br />
+    </form>
+    <hr />
+    ------ OR --------- <br /><br />
+    SIGN IN/SIGN UP using Google <br /><br />
+    <div class="g-signin2" data-onsuccess="onSignIn"></div>
+    <br />
+    <div id="alertify-element"></div>
+</body>
+</html>
